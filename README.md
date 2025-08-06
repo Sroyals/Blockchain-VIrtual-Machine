@@ -1,65 +1,74 @@
 # Blockchain-VIrtual-Machine
-Blockchain Virtual Machine (BVM)
+# Blockchain Virtual Machine (BVM)
 
 A Python-based virtual machine for executing smart contract bytecode, supporting contracts in 6 programming languages.
-Features
 
-    Compiles Python/ C/ Java/ CPP/ JS/ C# Contracts to custom bytecode
-    EVM-inspired architecture with gas accounting
-    Supports:
-        Arithmetic/logic operations
-        Conditional statements (if/else)
-        Loops (while, for)
-        Persistent storage
+## Features
 
-Quick Run
+- Compiles **Python**, **C**, **Java**, **C++**, **JavaScript**, and **C#** contracts to custom bytecode
+- EVM-inspired architecture with gas accounting
+- Supports:
+  - Arithmetic and logic operations
+  - Conditional statements (`if`/`else`)
+  - Loops (`while`, `for`)
+  - Persistent storage
 
-git clone https://github.com/AakashHarsh/BVM
-cd BVM/bvm_project
+## Quick Run
+
+```bash
+git clone https://github.com/Sroyals/Blockchain-VIrtual-Machine.git
+cd Blockchain-VIrtual-Machine/bvm_project
 python3 -m venv venv
 source venv/bin/activate
-pip install pycparser
-pip install javalang
-pip install esprima
+pip install pycparser javalang esprima
 python3 main.py contracts/math1.py contract2 500000
+```
 
-Detailed Steps
-Prerequisites
-OS: Linux
-Python 3.8+
-pycparser (for C contracts):
+## Detailed Steps
 
-pip install pycparser
+### Prerequisites
 
-javalang (for Java contracts):
+- **OS:** Linux
+- **Python:** 3.8+
 
-pip install javalang
+### Install dependencies
 
-esprima (for JavaScript contracts):
+```bash
+pip install pycparser javalang esprima
+```
 
-pip install esprima
+### Clone the repository
 
-Clone the repository
+```bash
+git clone https://github.com/Sroyals/Blockchain-VIrtual-Machine.git
+cd Blockchain-VIrtual-Machine/bvm_project
+```
 
-git clone https://github.com/AakashHarsh/BVM
-cd BVM/bvm_project
+### Run the BVM
 
-Run the BVM
-
+```bash
 python3 main.py <contract_path> <address> <gas_limit>
+```
 
-Command Arguments
-Argument 	Required 	Description 	Example
-contract_path 	Yes 	Path to contract file with extension 	contracts/math.c
-address 	Yes 	Unique contract identifier 	contract1
-gas_limit 	Yes 	Maximum gas for execution (integer) 	500000
-Example usage
+### Command Arguments
 
+| Argument       | Required | Description                               | Example             |
+|----------------|----------|-------------------------------------------|---------------------|
+| `contract_path`| Yes      | Path to contract file with extension      | `contracts/math.c`  |
+| `address`      | Yes      | Unique contract identifier                | `contract1`         |
+| `gas_limit`    | Yes      | Maximum gas for execution (integer)      | `500000`            |
+
+### Example Usage
+
+```bash
 python3 main.py contracts/math1.py contract2 500000
+```
 
-Similarly C, Java, CPP and JS contracts can be executed just by replacing contracts/math1.py with the path to corresponding C or java or CPP or JS file respectively.
-Execution Output Example
+> Similarly, C, Java, C++, JavaScript, and C# contracts can be executed by replacing `contracts/math1.py` with the corresponding file path.
 
+## Execution Output Example
+
+```
 Starting BVM with contract 'contract2'...
 
 Detected Python contract
